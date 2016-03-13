@@ -1,8 +1,8 @@
 // ========================================================================
 // bootstrap-server v1.0.0
-// http://twitter.github.com/bootstrap
+// http://twbs.github.com/bootstrap
 // ========================================================================
-// Copyright 2012 Twitter, Inc.
+// Copyright 2013 Twitter, Inc.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 // limitations under the License.
 // ========================================================================
 
-
 "use strict"
 
 var express = require('express')
@@ -29,7 +28,7 @@ types.img = require('./lib/img')
 types.js  = require('./lib/js')
 types.css = require('./lib/css')
 
-app.use(express.bodyParser());
+app.use(express.bodyParser())
 
 function refreshCache() {
   Object.keys(types).forEach(function (type) {
@@ -39,7 +38,6 @@ function refreshCache() {
 
 refreshCache()
 setInterval(refreshCache, 1000 * 60 * 60 * 2)
-
 
 // API args:
 //  + js   = array
